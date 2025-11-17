@@ -1,0 +1,138 @@
+/* css to style homepage */
+.home-page-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding-top: 2rem;
+}
+
+.search-container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.search-container header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.search-container header h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin: 0 0 16px 0;
+  color: #00a896;
+  letter-spacing: -0.02em;
+}
+
+.search-container header p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.history-section {
+  width: 100%;
+  max-width: 1000px;
+  background-color: var(--card-background);
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.history-section .section-title {
+  margin-top: 0;
+  font-size: 1.5rem;
+  padding-bottom: 16px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.history-list {
+  display: grid;
+  /* responsive grid that automatically resizes */
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.history-item {
+  background-color: #f8f9fa;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px;
+  cursor: pointer;
+  /* smooth animation  */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.history-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.history-route {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.history-route .iata-code {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-family: monospace;
+}
+
+.history-details {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/*--- motions --- */
+@media (max-width: 768px) {
+  .search-container header h1 {
+    font-size: 3rem;
+  }
+  
+  .search-container header p {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .search-container header h1 {
+    font-size: 2.5rem;
+    letter-spacing: -0.01em;
+  }
+  
+  .search-container header p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-container header h1 {
+    font-size: 2rem;
+  }
+  
+  .search-container header p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .search-container header h1 {
+    font-size: 1.75rem;
+  }
+  
+  .search-container header p {
+    font-size: 0.95rem;
+  }
+}
